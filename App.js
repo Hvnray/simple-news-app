@@ -1,21 +1,68 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+  StyleSheet,
+  Button,
+  View,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { Provider } from 'react-redux';
+import * as ImagePicker from 'expo-image-picker';
+import logo from './assets/icon.png';
+import News from './pages/News/index';
+import OneNews from './pages/News/OneNews';
+import AddNews from './pages/News/AddNews';
 
-export default function App() {
+import store from './rematch';
+
+const Stack = createStackNavigator();
+
+function Route() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer initialRouteName="News">
+      <Stack.Navigator>
+        <Stack.Screen
+          name="News"
+          component={News}
+          options={{
+            title: 'News App',
+          }}
+        />
+        <Stack.Screen
+          name="OneNews"
+          component={OneNews}
+          options={({ route }) => ({ title: route.params?.item?.title })}
+        />
+        <Stack.Screen
+          name="AddNews"
+          component={AddNews}
+          options={{
+            title: 'Add News',
+          }}
+          options={({ route }) => ({
+            title: route.params?.item ? 'Edit News' : 'Add News',
+          })}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
+export default function App() {
+  return (
+    <Provider store={store}>
+      <Route />
+    </Provider>
+  );
+}
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  // container: {
+  //   flex: 1,
+  //   backgroundColor: 'white',
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  // },
+  // text: { color: '#888', fontSize: 18, textAlign: 'center', padding: 10 },
 });
