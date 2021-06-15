@@ -100,16 +100,16 @@ const Comments = ({ list, newsId, deleteComment }) => {
     </ListItem.Swipeable>
   );
   return (
-    <SafeAreaView>
+    <View style={{ flex: 1 }}>
       <EditModal
         editItem={editItem}
         modalVisible={modalVisible}
         newsId={newsId}
         setModalVisible={setModalVisible}
       />
-      <View
+      {/* <View
         style={{
-          // flex: 1,
+          flex: 1,
           // position: 'relative',
           // top: 0,
           // left: 0,
@@ -117,17 +117,20 @@ const Comments = ({ list, newsId, deleteComment }) => {
           maxWidth: 450,
           minWidth: 380,
         }}
-      >
-        <FlatList
-          keyExtractor={keyExtractor}
-          data={list}
-          renderItem={renderItem}
-          // ListHeaderComponent={}
-          ListFooterComponent={<AddComments newsId={newsId} />}
-          ListFooterComponentStyle={styles.ListHeaderComponentStyle}
-        />
-      </View>
-    </SafeAreaView>
+      > */}
+      <FlatList
+        keyExtractor={keyExtractor}
+        data={list}
+        renderItem={renderItem}
+        // ListHeaderComponent={}
+        contentContainerStyle={{
+          flexGrow: 1,
+        }}
+        ListFooterComponent={<AddComments newsId={newsId} />}
+        ListFooterComponentStyle={styles.ListHeaderComponentStyle}
+      />
+      {/* </View> */}
+    </View>
   );
 };
 

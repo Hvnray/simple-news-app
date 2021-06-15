@@ -42,7 +42,7 @@ const OneNews = ({
     />
   );
   return (
-    <View
+    <ScrollView
       style={{
         flex: 1,
       }}
@@ -53,6 +53,7 @@ const OneNews = ({
           alignItems: 'center',
           minWidth: 370,
           maxWidth: 450,
+          flexGrow: 1,
         }}
       >
         <Card.Title>{item?.title?.toUpperCase()}</Card.Title>
@@ -84,7 +85,7 @@ const OneNews = ({
             newsId={route.params.item.id}
           />
       </Card>
-    </View>
+    </ScrollView>
   );
 };
 
