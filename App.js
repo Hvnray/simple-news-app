@@ -14,6 +14,10 @@ import logo from './assets/icon.png';
 import News from './pages/News/index';
 import OneNews from './pages/News/OneNews';
 import AddNews from './pages/News/AddNews';
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs([
+  'VirtualizedLists should never be nested inside plain ScrollViews with the same orientation - use another VirtualizedList-backed container instead.',
+]);
 
 import store from './rematch';
 
