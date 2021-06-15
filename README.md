@@ -72,19 +72,19 @@ This will start the process of "ejecting" from Create React Native App's build s
 
 **Warning:** Running eject is a permanent action (aside from whatever version control system you use). An ejected app will require you to have an [Xcode and/or Android Studio environment](https://facebook.github.io/react-native/docs/getting-started.html) set up.
 
-#### Add News
+#### `Add News`
 To add News click on the add news button on the home page
 
-#### Edit News
+#### `Edit News`
 To edit News click on the edit icon located at the top right of each news card on the home page
 
-#### Add Comment
+#### `Add Comment`
 To add Comment scroll to the end of comment list on each news, add comment form is available there
 
-#### Editing Comments
+#### `Editing Comments`
 To edit comments on News , swipe the comment area  from left to right to access edit option
 
-#### Deleting Comments
+#### `Deleting Comments`
 To edit comments on News , swipe the comment area  from right to left to access delete option
 
 ## Sharing and Deployment
