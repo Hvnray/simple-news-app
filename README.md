@@ -18,16 +18,13 @@ This project was bootstrapped with [EXPO](https://expo.io/) using yarn.
   * [yarn eject](#yarn-eject)
 * [Add News](#add-news)
 * [Edit News](#edit-news)
-* [Editing Comments](#editing-comments)
-* [Deleting Comments](#deleting-comment)
+* [Add Comments](#add-comments)
+* [Edit Comments](#edit-comments)
+* [Delet Comments](#delete-comment)
 * [Troubleshooting](#troubleshooting)
   * [Networking](#networking)
   * [iOS Simulator won't open](#ios-simulator-wont-open)
   * [QR Code does not scan](#qr-code-does-not-scan)
-
-## Updating to New Releases
-
-You should only need to update the global installation of `expo` very rarely, ideally never.
 
 
 ## Available Scripts
@@ -75,16 +72,19 @@ This will start the process of "ejecting" from Create React Native App's build s
 
 **Warning:** Running eject is a permanent action (aside from whatever version control system you use). An ejected app will require you to have an [Xcode and/or Android Studio environment](https://facebook.github.io/react-native/docs/getting-started.html) set up.
 
-## Adding News
+#### Add News
 To add News click on the add news button on the home page
 
-## Editting News
+#### Edit News
 To edit News click on the edit icon located at the top right of each news card on the home page
 
-## Editting Comments
+#### Add Comment
+To add Comment scroll to the end of comment list on each news, add comment form is available there
+
+#### Editing Comments
 To edit comments on News , swipe the comment area  from left to right to access edit option
 
-## Deleting Comments
+#### Deleting Comments
 To edit comments on News , swipe the comment area  from right to left to access delete option
 
 ## Sharing and Deployment
